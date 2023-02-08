@@ -46,7 +46,17 @@ export const GhibliShader = {
     varying vec3 vPosition;
 
     void main() {
-      vec4 final = vec4(colorMap[0], 1);
+      vec3 worldPosition = ( modelMatrix * vec4( vPosition, 1.0 )).xyz;
+      vec3 worldNormal = normalize( vec3( modelMatrix * vec4( vNormal, 0.0 ) ) );
+      vec3 lightVector = normalize( lightPosition - worldPosition );
+      float brightness = dot( worldNormal, lightVector );
+
+      vec4 final;
+
+      if (brightness > brightnessThresholds[0])
+        final = vec4(colorMap[0], 1);
+      else
+        final = vec4(colorMap[3], 1);
 
       gl_FragColor = vec4( final );
     }`,
