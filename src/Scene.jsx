@@ -1,4 +1,3 @@
-import { useGLTF } from "@react-three/drei";
 import { Trees } from "./Trees";
 
 export function Scene() {
