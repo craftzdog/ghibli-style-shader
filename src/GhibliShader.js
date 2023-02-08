@@ -16,13 +16,34 @@ export const GhibliShader = {
     lightPosition: { value: new Vector3(15, 15, 15) },
   },
   vertexShader: /* glsl */ `
+    // Set the precision for data types used in this shader
+    precision highp float;
+    precision highp int;
+
+    // Variables to pass from vertex to fragment shader
+    varying vec3 vNormal;
+    varying vec3 vPosition;
+
     void main() {
+      vNormal = normal;
+      vPosition = position;
+
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
     }`,
   fragmentShader: /* glsl */ `
+    precision highp float;
+    precision highp int;
+
+    // Default THREE.js uniforms available to both fragment and vertex shader
+    uniform mat4 modelMatrix;
+
     uniform vec3 colorMap[4];
     uniform float brightnessThresholds[3];
     uniform vec3 lightPosition;
+
+    // Variables passed from vertex to fragment shader
+    varying vec3 vNormal;
+    varying vec3 vPosition;
 
     void main() {
       vec4 final = vec4(colorMap[0], 1);
