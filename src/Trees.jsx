@@ -1,6 +1,6 @@
 import { forwardRef, useMemo } from "react";
 import { useGLTF } from "@react-three/drei";
-import { Color, Vector3 } from "three";
+import { Vector3 } from "three";
 import { GhibliShader } from "./GhibliShader";
 
 export const Trees = forwardRef((props, ref) => {
@@ -9,19 +9,14 @@ export const Trees = forwardRef((props, ref) => {
   const uniforms = useMemo(
     () => ({
       colorMap: {
-        value: [
-          new Color("#427062").convertLinearToSRGB(),
-          new Color("#33594e").convertLinearToSRGB(),
-          new Color("#234549").convertLinearToSRGB(),
-          new Color("#1e363f").convertLinearToSRGB(),
-        ],
+        value: props.colors,
       },
       brightnessThresholds: {
         value: [0.6, 0.35, 0.001],
       },
       lightPosition: { value: new Vector3(15, 15, 15) },
     }),
-    []
+    [props.colors]
   );
 
   return (
