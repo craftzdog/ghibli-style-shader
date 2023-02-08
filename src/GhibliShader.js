@@ -55,6 +55,10 @@ export const GhibliShader = {
 
       if (brightness > brightnessThresholds[0])
         final = vec4(colorMap[0], 1);
+      else if (brightness > brightnessThresholds[1])
+        final = vec4(colorMap[1], 1);
+      else if (brightness > brightnessThresholds[2])
+        final = vec4(colorMap[2], 1);
       else
         final = vec4(colorMap[3], 1);
 
