@@ -12,9 +12,7 @@ export function Trees(props) {
         geometry={nodes.Foliage.geometry}
         position={[0.33, -0.05, -0.68]}
       >
-        <meshStandardMaterial
-          color={new Color("#33594e").convertLinearToSRGB()}
-        />
+        <meshToonMaterial color="#234549" />
       </mesh>
     </group>
   );
