@@ -2,6 +2,21 @@
   "name": "ghibli-style-shader",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Takuya Matsuyama",
+    "email": "hi@craftz.dog",
+    "url": "https://www.devas.life/"
+  },
+  "keywords": [
+    "Three",
+    "React Fiber",
+    "Ghibli",
+    "React"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftzdog/ghibli-style-shader.git"
+  },
   "dependencies": {
     "@react-three/drei": "^9.56.18",
     "@react-three/fiber": "^8.11.0",
