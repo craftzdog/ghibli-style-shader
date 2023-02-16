@@ -22,6 +22,10 @@ npm i
 npm start
 ```
 
+## References
+
+- [How to Create Ghibli Trees in 3D - Blender Tutorial, by Lightning Boy Studio](https://www.youtube.com/watch?v=DEgzuMmJtu8&ab_channel=LightningBoyStudio)
+
 ---
 
 Looking for a Markdown note-taking app? Check out my app called Inkdrop:
