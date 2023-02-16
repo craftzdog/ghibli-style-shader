@@ -2,11 +2,11 @@
 
 [Video tutorial](https://www.youtube.com/watch?v=IGK6eceWyU4)
 
-![](./doc/image.jpg)
+![image](./doc/image.jpg)
 
-![](./doc/image 2.jpg)
+![image](./doc/image_2.jpg)
 
-![](./doc/image 3.jpg)
+![image](./doc/image_3.jpg)
 
 ## Ingredients
 
